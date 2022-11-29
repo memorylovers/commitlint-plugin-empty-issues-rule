@@ -1,0 +1,19 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "html",
+    "json",
+    "jsonc",
+    "json5"
+  ],
+  "editor.formatOnSave": true,
+  "markdownlint.config": {},
+  "markdownlint.lintWorkspaceGlobs": ["**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}"],
+  "markdownlint.ignore": ["**/bower_components", "**/node_modules", "**/vendor", "**/.git", "**/LICENSE"],
+  "prettier.resolveGlobalModules": false
+}
