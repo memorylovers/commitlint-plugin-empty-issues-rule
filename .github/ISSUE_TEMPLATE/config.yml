@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions & Discussions
+    url: https://github.com/memorylovers/utils-ts/discussions
+    about: Use GitHub discussions for message-board style questions and discussions.
+  - name: Twitter
+    url: https://twitter.com/MemoryLoverz
+    about: Use Twitter for questions and discussions.

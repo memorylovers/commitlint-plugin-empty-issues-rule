@@ -14,6 +14,9 @@
   "editor.formatOnSave": true,
   "markdownlint.config": {},
   "markdownlint.lintWorkspaceGlobs": ["**/*.{md,mkd,mdwn,mdown,markdown,markdn,mdtxt,mdtext,workbook}"],
-  "markdownlint.ignore": ["**/bower_components", "**/node_modules", "**/vendor", "**/.git", "**/LICENSE"],
-  "prettier.resolveGlobalModules": false
+  "markdownlint.ignore": ["**/node_modules", "**/.git", "**/dist", "**/LICENSE"],
+  "prettier.resolveGlobalModules": false,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-issue-config.json": "file:///Users/fujiuray/workspace_memoryloves/workspace_oss/001_products/utils-ts/.github/ISSUE_TEMPLATE/config.yml"
+  }
 }
