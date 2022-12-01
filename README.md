@@ -16,12 +16,12 @@ Use this plugin in your project's [commitlint](https://commitlint.js.org) config
 ```javascript
 // commitlint.config.cjs
 module.exports = {
-  extends: ['@commitlint/config-conventional'],
-  plugins: ['empty-issues-rule'],
+  extends: ["@commitlint/config-conventional"],
+  plugins: ["empty-issues-rule"],
   rules: {
-    'empty-issues-rule': [2, 'always'],
+    "empty-issues": [2, "always"],
   },
-}
+};
 ```
 
 ## Contributing

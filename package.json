@@ -77,7 +77,7 @@
       "empty-issues-rule"
     ],
     "rules": {
-      "empty-issues-rule": [
+      "empty-issues": [
         1,
         "always"
       ]
@@ -171,19 +171,6 @@
     "ignorePatterns": [
       "**/*.test.ts",
       "dist"
-    ]
-  },
-  "prettier": {
-    "overrides": [
-      {
-        "files": [
-          "*.md",
-          "README"
-        ],
-        "options": {
-          "parser": "markdown-nocjsp"
-        }
-      }
     ]
   },
   "lint-staged": {
