@@ -1,5 +1,5 @@
 import { Commit, RuleConfigCondition } from "@commitlint/types";
-import { errorMessage, ruleEmptyIssues } from "./rules";
+import { ERR_MESSAGE, ruleEmptyIssues } from "./rules";
 
 type RuleResponse = [boolean, (string | undefined)?];
 const doTest = (msg: string, expected: RuleResponse, when: RuleConfigCondition = "always") => {
@@ -38,12 +38,12 @@ describe("rules test suite; ok", () => {
 
 describe("rules test suite; ng", () => {
   it("ng: no issue", () => {
-    doTest("choro: update", [false, errorMessage]);
-    doTest("", [false, errorMessage]);
+    doTest("choro: update", [false, ERR_MESSAGE.EMPTY_ISSUES]);
+    doTest("", [false, ERR_MESSAGE.EMPTY_ISSUES]);
   });
 
   it("ng: invalid issue format", () => {
-    doTest("choro: update #1aa", [false, errorMessage]);
-    doTest("choro: update #1aa/", [false, errorMessage]);
+    doTest("choro: update #1aa", [false, ERR_MESSAGE.EMPTY_ISSUES]);
+    doTest("choro: update #1aa/", [false, ERR_MESSAGE.EMPTY_ISSUES]);
   });
 });
