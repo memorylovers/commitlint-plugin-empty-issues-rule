@@ -56,6 +56,7 @@
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "commitizen": "^4.2.5",
+    "commitlint-plugin-empty-issues-rule": "0.0.0-beta.20221201085924",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
@@ -156,19 +157,6 @@
     "ignorePatterns": [
       "**/*.test.ts",
       "dist"
-    ]
-  },
-  "prettier": {
-    "overrides": [
-      {
-        "files": [
-          "*.md",
-          "README"
-        ],
-        "options": {
-          "parser": "markdown-nocjsp"
-        }
-      }
     ]
   },
   "lint-staged": {
