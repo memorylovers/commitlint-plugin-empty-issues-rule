@@ -13,7 +13,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.45.0
   '@typescript-eslint/parser': ^5.45.0
   commitizen: ^4.2.5
-  commitlint-plugin-empty-issues-rule: 0.0.0-beta.20221201085924
+  commitlint-plugin-empty-issues-rule: 0.0.1-beta.20221201234509
   cz-conventional-changelog: ^3.3.0
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
@@ -39,7 +39,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.45.0_czs5uoqkd3podpy6vgtsxfc7au
   '@typescript-eslint/parser': 5.45.0_hsf322ms6xhhd4b5ne6lb74y4a
   commitizen: 4.2.5
-  commitlint-plugin-empty-issues-rule: 0.0.0-beta.20221201085924
+  commitlint-plugin-empty-issues-rule: 0.0.1-beta.20221201234509
   cz-conventional-changelog: 3.3.0
   eslint: 8.28.0
   eslint-config-prettier: 8.5.0_eslint@8.28.0
@@ -1075,9 +1075,9 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /commitlint-plugin-empty-issues-rule/0.0.0-beta.20221201085924:
-    resolution: {integrity: sha512-y1U/ddmw7e+oKJt+1+Ih+AEZllIYh+V3Hvc8qdTHJTl6QDwW39xpDcYDB7WpAsQgGM6ViJCaYZz/buFSr4kfmA==}
-    engines: {node: '16'}
+  /commitlint-plugin-empty-issues-rule/0.0.1-beta.20221201234509:
+    resolution: {integrity: sha512-lfKgFGDq9Eu+oQFqkGStRTp/oJiLneDLwpcHvSdcVtGuBuh5Zu7UU0lEjAbN1rzShthjJAEubLLOft+sp4od3w==}
+    engines: {node: '>=16'}
     dev: true
 
   /compare-func/2.0.0:
