@@ -22,6 +22,7 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
 
+      - run: pnpm install && pnpm build
       - name: check publish
         run: npm publish --no-git-checks --dry-run
         env:
