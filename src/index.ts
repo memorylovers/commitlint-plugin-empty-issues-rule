@@ -1,13 +1,8 @@
-import type { Rule,Plugin } from "@commitlint/types";
-
- const ruleEmptyIssues:Rule = (parsed) => {
-  const { header } = parsed;
-  const hasIssue = header.match(/(#\d+)/) != null;
-  return hasIssue ? [true] : [false, "empty issues"];
-}
+import type { Plugin } from "@commitlint/types";
+import { ruleEmptyIssues } from "./rules";
 
 export const plugin: Plugin = {
   rules: {
-    "empty-issues": ruleEmptyIssues
-  }
+    "empty-issues": ruleEmptyIssues,
+  },
 };
