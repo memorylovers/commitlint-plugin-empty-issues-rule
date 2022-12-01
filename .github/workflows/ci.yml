@@ -7,8 +7,8 @@ env:
   GH_USER_NAME: github-acitons[bot]
 
 jobs:
-  add-tag:
-    if: github.event.pull_request.merged == true
+  ci:
+    # if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,7 +27,11 @@ jobs:
 
       - name: publish
         run: |
+          date=`date "+%Y%m%d%H%M%S"`
+          name=`npm pkg get name | jq -r`
           version=`npm pkg get version | jq -r`
-          pnpm publish --no-git-checks
+          npm pkg set version="${version}-beta.${date}"
+          pkgSpec="${name}@${version}-beta.${date}"
+          npm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
