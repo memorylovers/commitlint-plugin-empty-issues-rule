@@ -45,10 +45,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-    "changelog": "pnpx changelogen",
+    "changelog": "pnpx changelogithub --dry",
     "prepare": "husky install",
-    "ci": "git-cz",
-    "release": "pnpx bumpp --no-all"
+    "ci": "git-cz"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
