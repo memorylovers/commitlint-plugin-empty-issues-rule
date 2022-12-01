@@ -47,7 +47,7 @@
     "coverage": "vitest run --coverage",
     "changelog": "pnpx changelogithub --dry",
     "prepare": "husky install",
-    "ci": "git-cz"
+    "setup:git": "git config alias.ci '!pnpm git-cz' && git config alias.ci-a 'commit --amend'"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
