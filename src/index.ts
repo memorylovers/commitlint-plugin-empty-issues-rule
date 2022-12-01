@@ -1,10 +1,8 @@
 import type { Plugin } from "@commitlint/types";
-import { ruleEmptyIssues } from "./rules";
+import { rules } from "./rules";
 
-export const plugin: Plugin = {
-  rules: {
-    "empty-issues": ruleEmptyIssues,
-  },
+const plugin: Plugin = {
+  rules: rules,
 };
 
-export default plugin;
+export = plugin;

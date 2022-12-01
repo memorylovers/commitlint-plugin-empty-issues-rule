@@ -18,5 +18,6 @@
   "prettier.resolveGlobalModules": false,
   "yaml.schemas": {
     "https://json.schemastore.org/github-issue-config.json": "file:///Users/fujiuray/workspace_memoryloves/workspace_oss/001_products/utils-ts/.github/ISSUE_TEMPLATE/config.yml"
-  }
+  },
+  "testing.automaticallyOpenPeekView": "never"
 }
