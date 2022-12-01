@@ -23,7 +23,7 @@ jobs:
       - run: pnpm build
 
       - name: publish
-        if: github.event.pull_request.merged && github.event.action == 'closed'
+        if: github.event.pull_request.merged == true && github.event.action == 'closed'
         run: |
           date=`date "+%Y%m%d%H%M%S"`
           name=`npm pkg get name | jq -r`
