@@ -1,6 +1,6 @@
 {
   "name": "commitlint-plugin-empty-issues-rule",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "commitlint rule plugin to check include issues",
   "author": "Memory Lovers, LLC<https://github.com/memorylovers>",
   "license": "MIT",
@@ -45,19 +45,103 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-    "changelog": "pnpx changelogen"
+    "changelog": "pnpx changelogithub --dry",
+    "prepare": "husky install",
+    "ci": "git-cz"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
     "@commitlint/types": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
+    "git-cz": "^4.9.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.8.0",
     "prettier-plugin-md-nocjsp": "^1.4.0",
     "typescript": "^4.8.4",
     "vite": "^3.2.3",
     "vitest": "^0.25.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz",
+      "changelog": {
+        "format": "{type}{scope}: {emoji}{subject}",
+        "questions": [
+          "type",
+          "scope",
+          "subject"
+        ],
+        "types": {
+          "feat": {
+            "description": "Enhancements",
+            "emoji": "🚀",
+            "value": "feat"
+          },
+          "perf": {
+            "description": "🔥",
+            "emoji": "🔥",
+            "value": "perf"
+          },
+          "fix": {
+            "description": "Fixes",
+            "emoji": "🩹",
+            "value": "fix"
+          },
+          "refactor": {
+            "description": "Refactors",
+            "emoji": "💅",
+            "value": "refactor"
+          },
+          "docs": {
+            "description": "Documentation",
+            "emoji": "📖",
+            "value": "docs"
+          },
+          "build": {
+            "description": "Build",
+            "emoji": "📦",
+            "value": "build"
+          },
+          "types": {
+            "description": "Types",
+            "emoji": "🌊",
+            "value": "types"
+          },
+          "chore": {
+            "description": "Chore",
+            "emoji": "🏡",
+            "value": "chore"
+          },
+          "examples": {
+            "description": "Examples",
+            "emoji": "🏀",
+            "value": "examples"
+          },
+          "test": {
+            "description": "Tests",
+            "emoji": "✅",
+            "value": "test"
+          },
+          "style": {
+            "description": "Styles",
+            "emoji": "🎨",
+            "value": "style"
+          },
+          "ci": {
+            "description": "CI",
+            "emoji": "🤖",
+            "value": "ci"
+          }
+        }
+      }
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -86,5 +170,9 @@
         }
       }
     ]
+  },
+  "lint-staged": {
+    "*": "prettier --write",
+    "*.{js,cjs,mjs,ts}": "eslint --ignore-path .gitignore"
   }
 }
