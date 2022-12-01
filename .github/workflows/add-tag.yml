@@ -1,5 +1,8 @@
 name: Add Tag
 on:
+  pull_request:
+    branches: [main]
+    types: [closed]
   workflow_dispatch:
 
 env:
@@ -7,26 +10,16 @@ env:
   GH_USER_NAME: github-acitons[bot]
 
 jobs:
-  release:
+  add-tag:
+    if: (github.event.pull_request.merged && startsWith(github.head_ref, "release/")) || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 7
       - uses: actions/setup-node@v3
         with:
           node-version: "16"
-          registry-url: "https://registry.npmjs.org"
-          cache: "pnpm"
-
-      - run: pnpm install && pnpm build
-      - name: check publish
-        run: npm publish --no-git-checks --dry-run
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: setup git config
         run: |
