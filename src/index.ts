@@ -6,3 +6,5 @@ export const plugin: Plugin = {
     "empty-issues": ruleEmptyIssues,
   },
 };
+
+export default plugin;

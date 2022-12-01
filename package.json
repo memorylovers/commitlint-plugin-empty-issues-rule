@@ -69,20 +69,6 @@
     "vite": "^3.2.3",
     "vitest": "^0.25.3"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "plugins": [
-      "empty-issues-rule"
-    ],
-    "rules": {
-      "empty-issues": [
-        1,
-        "always"
-      ]
-    }
-  },
   "config": {
     "commitizen": {
       "path": "git-cz",
