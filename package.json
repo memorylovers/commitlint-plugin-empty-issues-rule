@@ -1,6 +1,6 @@
 {
   "name": "commitlint-plugin-empty-issues-rule",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "commitlint rule plugin to check include issues",
   "author": "Memory Lovers, LLC<https://github.com/memorylovers>",
   "license": "MIT",
@@ -47,7 +47,8 @@
     "coverage": "vitest run --coverage",
     "changelog": "pnpx changelogen",
     "prepare": "husky install",
-    "ci": "git-cz"
+    "ci": "git-cz",
+    "release": "pnpx bumpp"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
