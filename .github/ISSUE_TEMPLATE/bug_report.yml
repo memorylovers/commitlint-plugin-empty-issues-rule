@@ -54,7 +54,7 @@ body:
     id: system-info
     attributes:
       label: System Info
-      description: Output of `npx envinfo --system --npmPackages '{@memory-lovers/utils-ts}' --binaries --browsers`
+      description: Output of `npx envinfo --system --npmPackages '{commitlint-plugin-empty-issues}' --binaries --browsers`
       render: Shell
       placeholder: System, Binaries, Browsers
     validations:
