@@ -1,4 +1,4 @@
-name: create-pr
+name: 11_create-pr
 on:
   push:
     branches-ignore: [main, "releases/**"]
