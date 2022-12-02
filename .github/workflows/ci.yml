@@ -29,14 +29,14 @@ jobs:
       - run: pnpm test
       - run: pnpm build
 
-      - name: publish
-        if: github.event.pull_request.merged == true && github.event.action == 'closed'
-        run: |
-          date=`date "+%Y%m%d%H%M%S"`
-          name=`npm pkg get name | jq -r`
-          version=`npm pkg get version | jq -r`
-          npm pkg set version="${version}-beta.${date}"
-          pkgSpec="${name}@${version}-beta.${date}"
-          npm publish --no-git-checks --tag beta
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: publish
+      #   if: github.event.pull_request.merged == true && github.event.action == 'closed'
+      #   run: |
+      #     date=`date "+%Y%m%d%H%M%S"`
+      #     name=`npm pkg get name | jq -r`
+      #     version=`npm pkg get version | jq -r`
+      #     npm pkg set version="${version}-beta.${date}"
+      #     pkgSpec="${name}@${version}-beta.${date}"
+      #     npm publish --no-git-checks --tag beta
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
