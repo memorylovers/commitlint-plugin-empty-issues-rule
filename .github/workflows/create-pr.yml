@@ -18,13 +18,11 @@ jobs:
           echo "TARGET_BRANCH=${target_brach}" >> $GITHUB_ENV
           echo "PR_TITLE=${pr_title}" >> $GITHUB_ENV
 
+      - uses: actions/checkout@v3
+
       - id: check_pr
         run: |
           echo "count=$(gh pr list -B ${{ env.BASE_BRANCH }} -H ${{ env.TARGET_BRANCH }} --json 'id' -q '.[] | length')" >> $GITHUB_OUTPUT
 
-      - if: ${{ steps.check_pr.outputs.count == '' }}
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
       - if: ${{ steps.check_pr.outputs.count == '' }}
         run: gh pr create --fill -B ${{ env.BASE_BRANCH }} -t "${{ env.PR_TITLE }}" -r "${{ github.event.pusher.username }}"
