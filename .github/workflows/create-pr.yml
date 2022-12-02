@@ -10,17 +10,15 @@ env:
 
 jobs:
   create-pr:
-    if: github.event.created || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - run: |
           target_brach="${{ github.ref_name }}"
-          pr_title=`${echo ${target_brach} | tr '_' ' ' | sed 's/ /: /''}`
+          pr_title=`${echo ${target_brach} | tr '_' ' ' | sed 's/ /: /'}`
           echo "TARGET_BRANCH=${target_brach}" >> $GITHUB_ENV
           echo "PR_TITLE=${pr_title}" >> $GITHUB_ENV
 
-      - if: ${{ !github.event.created }}
-        id: check_pr
+      - id: check_pr
         run: |
           echo "count=$(gh pr list -B ${{ env.BASE_BRANCH }} -H ${{ env.TARGET_BRANCH }} --json 'id' -q '.[] | length')" >> $GITHUB_OUTPUT
 
