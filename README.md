@@ -28,7 +28,7 @@ module.exports = {
 
 Pull requests and stars are always welcome.
 
-Please [create an issue](/issues/new/choose) if you have a bug report, feature proposal or question that does not yet exist.
+Please [create an issue](https://github.com/memorylovers/commitlint-plugin-empty-issues-rule/issues/new/choose) if you have a bug report, feature proposal or question that does not yet exist.
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
