@@ -15,7 +15,7 @@ jobs:
     steps:
       - run: |
           target_brach="${{ github.ref_name }}"
-          pr_title=`${echo "${target_brach} " | tr "_" " " | sed "s/ /: /"}`
+          pr_title=`${echo ${target_brach} | tr '_' ' ' | sed 's/ /: /''}`
           echo "TARGET_BRANCH=${target_brach}" >> $GITHUB_ENV
           echo "PR_TITLE=${pr_title}" >> $GITHUB_ENV
 
