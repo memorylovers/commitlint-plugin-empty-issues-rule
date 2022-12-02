@@ -39,7 +39,7 @@ jobs:
           new_version=`npm pkg get version | jq -r`
           new_tag_name="${tag_prefix}${new_version}"
 
-          git co -- .
+          git checkout -- .
 
           branche_name="release/${new_version}"
           git checkout -b "${branche_name}"

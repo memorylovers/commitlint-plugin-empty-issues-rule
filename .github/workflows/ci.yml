@@ -3,6 +3,12 @@ on:
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened, closed]
+    paths:
+      - "src/**"
+      - package.json
+      - tsconfig.json
+      - vite.config.ts
+      - vitest.config.ts
   workflow_dispatch:
 
 jobs:
