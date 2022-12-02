@@ -1,6 +1,6 @@
 {
   "name": "commitlint-plugin-empty-issues-rule",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "commitlint rule plugin to check include issues",
   "author": "Memory Lovers, LLC<https://github.com/memorylovers>",
   "license": "MIT",
