@@ -26,4 +26,4 @@ jobs:
           echo "count=$(gh pr list -B ${{ env.BASE_BRANCH }} -H ${{ env.TARGET_BRANCH }} --json 'id' -q '.[] | length')" >> $GITHUB_OUTPUT
 
       - if: ${{ steps.check_pr.outputs.count == '' }}
-        run: gh pr create -B ${{ env.BASE_BRANCH }} -t "${{ env.PR_TITLE }}" -b "" -r "@${{ github.event.pusher.name }}"
+        run: gh pr create -B ${{ env.BASE_BRANCH }} -t "${{ env.PR_TITLE }}" -b "" -r "${{ github.event.pusher.name }}"
