@@ -1,4 +1,4 @@
-name: Add Tag
+name: add-tag
 on:
   pull_request:
     branches: [main]
