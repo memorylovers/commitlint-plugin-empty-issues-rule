@@ -1,8 +1,7 @@
-name: CI
+name: 10_ci
 on:
   pull_request:
     branches: [main]
-    types: [opened, synchronize, reopened, closed]
     paths:
       - "src/**"
       - package.json
