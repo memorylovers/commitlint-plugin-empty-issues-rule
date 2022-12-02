@@ -12,6 +12,7 @@ jobs:
   create-pr:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "${{ toJson(github) }}"
       - run: |
           target_brach="${{ github.ref_name }}"
           pr_title=`echo ${target_brach} | tr "_" " " | sed "s/ /: /"`
