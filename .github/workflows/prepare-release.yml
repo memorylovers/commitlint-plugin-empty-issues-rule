@@ -50,5 +50,5 @@ jobs:
 
       - name: create release pr
         run: |
-          pnpx changelogen --no-commit --no-tag --output --from ${{ env.OLD_TAG }} -to ${{ NEW_TAG }}
+          pnpx changelogen --no-commit --no-tag --output --from ${{ env.OLD_TAG }} -to ${{ env.NEW_TAG }}
           gh pr create -t "RELAESE ${tag_name}" -F CHANGELOG.md -a "@me"
