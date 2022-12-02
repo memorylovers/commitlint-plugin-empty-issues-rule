@@ -5,13 +5,13 @@
   "author": "Memory Lovers, LLC<https://github.com/memorylovers>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/memory-lovers",
-  "homepage": "https://github.com/memorylovers/commitlint-plugin-empty-issues",
+  "homepage": "https://github.com/memorylovers/commitlint-plugin-empty-issues-rule",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/memorylovers/commitlint-plugin-empty-issues.git"
+    "url": "git+https://github.com/memorylovers/commitlint-plugin-empty-issues-rule.git"
   },
   "bugs": {
-    "url": "https://github.com/memorylovers/commitlint-plugin-empty-issues/issues"
+    "url": "https://github.com/memorylovers/commitlint-plugin-empty-issues-rule/issues"
   },
   "keywords": [
     "commitlint",
