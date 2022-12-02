@@ -3,6 +3,9 @@ on:
   push:
     tags: [v*]
   workflow_dispatch:
+  workflow_run:
+    workflows: [12_add-tag]
+    types: [completed]
 
 env:
   GH_USER_EMAIL: 41898282+github-acitons[bot]@users.noreply.github.com
@@ -10,6 +13,7 @@ env:
 
 jobs:
   release:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
