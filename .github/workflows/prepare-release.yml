@@ -49,10 +49,12 @@ jobs:
 
           echo "OLD_TAG=${old_tag_name}" >> $GITHUB_ENV
           echo "NEW_TAG=${new_tag_name}" >> $GITHUB_ENV
+          echo "OLD_TAG=${old_tag_name}"
+          echo "NEW_TAG=${new_tag_name}"
 
       - name: create release pr
         run: |
-          pnpx changelogen --no-commit --no-tag --output -from ${{ env.OLD_TAG }} -to ${{ env.NEW_TAG }}
-          gh pr create -t "RELAESE ${new_tag_name}" -F CHANGELOG.md -r "memory-lovers"
+          pnpx changelogen --no-commit --no-tag --output -to ${{ env.NEW_TAG }}
+          gh pr create -t "RELAESE ${{ env.NEW_TAG }}" -F CHANGELOG.md -r "memory-lovers"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
