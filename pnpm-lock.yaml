@@ -39,7 +39,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.45.0_czs5uoqkd3podpy6vgtsxfc7au
   '@typescript-eslint/parser': 5.45.0_hsf322ms6xhhd4b5ne6lb74y4a
   commitizen: 4.2.5
-  commitlint-plugin-empty-issues-rule: 0.0.1-beta.20221201235704
+  commitlint-plugin-empty-issues-rule: 0.1.0
   cz-conventional-changelog: 3.3.0
   eslint: 8.28.0
   eslint-config-prettier: 8.5.0_eslint@8.28.0
@@ -1075,8 +1075,8 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /commitlint-plugin-empty-issues-rule/0.0.1-beta.20221201235704:
-    resolution: {integrity: sha512-XuEw2+bHwMwdYLX/zUsjatcgEsQdcCKdtzxyMGAoWWqL5xcerlvHMqPVLYwGMqjeuCz/7gFJSClSe0PRvGG8fg==}
+  /commitlint-plugin-empty-issues-rule/0.1.0:
+    resolution: {integrity: sha512-NyK2y+esPBSUexHlj9VnPUbziFihlNDYnTTadHaTf0NmaXm2Up/A1yyMFitQ7BiOic3KP2hfNVsiqodqxIsvKQ==}
     engines: {node: '>=16'}
     dev: true
 
@@ -1189,7 +1189,7 @@ packages:
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
-      word-wrap: 1.2.3
+      word-wrap: 1.2.4
     optionalDependencies:
       '@commitlint/load': 17.3.0
     transitivePeerDependencies:
@@ -2564,7 +2564,7 @@ packages:
       levn: 0.4.1
       prelude-ls: 1.2.1
       type-check: 0.4.0
-      word-wrap: 1.2.3
+      word-wrap: 1.2.4
     dev: true
 
   /ora/5.4.1:
@@ -3448,8 +3448,8 @@ packages:
       isexe: 2.0.0
     dev: true
 
-  /word-wrap/1.2.3:
-    resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
+  /word-wrap/1.2.4:
+    resolution: {integrity: sha512-2V81OA4ugVo5pRo46hAoD2ivUJx8jXmWXfUkY4KFNw0hEptvN0QfH3K4nHiwzGeKl5rFKedV48QVoqYavy4YpA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
