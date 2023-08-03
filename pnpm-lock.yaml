@@ -39,7 +39,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.45.0_czs5uoqkd3podpy6vgtsxfc7au
   '@typescript-eslint/parser': 5.45.0_hsf322ms6xhhd4b5ne6lb74y4a
   commitizen: 4.2.5
-  commitlint-plugin-empty-issues-rule: 0.0.1-beta.20221201235704
+  commitlint-plugin-empty-issues-rule: 0.1.0
   cz-conventional-changelog: 3.3.0
   eslint: 8.28.0
   eslint-config-prettier: 8.5.0_eslint@8.28.0
@@ -49,7 +49,7 @@ devDependencies:
   prettier: 2.8.0
   prettier-plugin-md-nocjsp: 1.4.0
   typescript: 4.9.3
-  vite: 3.2.4
+  vite: 3.2.7
   vitest: 0.25.3
 
 packages:
@@ -1075,8 +1075,8 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /commitlint-plugin-empty-issues-rule/0.0.1-beta.20221201235704:
-    resolution: {integrity: sha512-XuEw2+bHwMwdYLX/zUsjatcgEsQdcCKdtzxyMGAoWWqL5xcerlvHMqPVLYwGMqjeuCz/7gFJSClSe0PRvGG8fg==}
+  /commitlint-plugin-empty-issues-rule/0.1.0:
+    resolution: {integrity: sha512-NyK2y+esPBSUexHlj9VnPUbziFihlNDYnTTadHaTf0NmaXm2Up/A1yyMFitQ7BiOic3KP2hfNVsiqodqxIsvKQ==}
     engines: {node: '>=16'}
     dev: true
 
@@ -3315,8 +3315,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/3.2.4:
-    resolution: {integrity: sha512-Z2X6SRAffOUYTa+sLy3NQ7nlHFU100xwanq1WDwqaiFiCe+25zdxP1TfCS5ojPV2oDDcXudHIoPnI1Z/66B7Yw==}
+  /vite/3.2.7:
+    resolution: {integrity: sha512-29pdXjk49xAP0QBr0xXqu2s5jiQIXNvE/xwd0vUizYT2Hzqe4BksNNoWllFVXJf4eLZ+UlVQmXfB4lWrc+t18g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -3348,8 +3348,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vite/3.2.4_@types+node@18.11.9:
-    resolution: {integrity: sha512-Z2X6SRAffOUYTa+sLy3NQ7nlHFU100xwanq1WDwqaiFiCe+25zdxP1TfCS5ojPV2oDDcXudHIoPnI1Z/66B7Yw==}
+  /vite/3.2.7_@types+node@18.11.9:
+    resolution: {integrity: sha512-29pdXjk49xAP0QBr0xXqu2s5jiQIXNvE/xwd0vUizYT2Hzqe4BksNNoWllFVXJf4eLZ+UlVQmXfB4lWrc+t18g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -3417,7 +3417,7 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.3.0
       tinyspy: 1.0.2
-      vite: 3.2.4_@types+node@18.11.9
+      vite: 3.2.7_@types+node@18.11.9
     transitivePeerDependencies:
       - less
       - sass
